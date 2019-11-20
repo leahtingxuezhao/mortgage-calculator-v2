@@ -1,3 +1,9 @@
 .background {
   background-image: url("./images/whitebackground.jpg");
 }
+
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
