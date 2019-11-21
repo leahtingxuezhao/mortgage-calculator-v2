@@ -11,9 +11,22 @@ class Calculator extends React.Component {
     };
   }
 
-  onChangeDownPayment(newDownPayment) {
-    this.setState({ downPayment: newDownPayment });
+  onChangeDownPayment(e) {
+    this.setState({ downPayment: e.target.value });
   }
+  onChangeHomePrice(e) {
+    this.setState({ homePrice: e.target.value });
+  }
+  onChangeInterestRate(e) {
+    this.setState({ interestRate: e.target.value });
+  }
+  onChangePropertyTax(e) {
+    this.setState({ propertyTax: e.target.value });
+  }
+  onChangePropertyInsurance(e) {
+    this.setState({ propertyInsurance: e.target.value });
+  }
+
   render() {
     return (
       <div className={"jumbotron calculator"}>
@@ -30,15 +43,27 @@ class Calculator extends React.Component {
           <form>
             Home Price:
             <br />
-            <input type="text" name="home price" />
+            <input
+              onChange={this.onChangeHomePrice}
+              type="text"
+              name="home price"
+            />
             <br />
             Down Payment:
             <br />
-            <input type="text" name="down payment" />
+            <input
+              onChange={this.onChangeDownPayment}
+              type="text"
+              name="down payment"
+            />
             <br />
             Interest Rate:
             <br />
-            <input type="text" name="interest rate" />
+            <input
+              onChange={this.onChangeInterestRate}
+              type="text"
+              name="interest rate"
+            />
             <br />
             Length of Loan:
             <br />
@@ -50,11 +75,19 @@ class Calculator extends React.Component {
             <br />
             Property Tax:
             <br />
-            <input type="text" name="property tax" />
+            <input
+              onChange={this.onChangePropertyTax}
+              type="text"
+              name="property tax"
+            />
             <br />
             Property Insurance:
             <br />
-            <input type="text" name="property insurance" />
+            <input
+              onChange={this.onChangePropertyInsurance}
+              type="text"
+              name="property insurance"
+            />
             <br />
           </form>
         </div>
